@@ -1,9 +1,6 @@
 import React from "react";
 
 const Contact: React.FC = () => {
-  const handleContact = () => {
-    window.location.href = "mailto:calebagrelius@gmail.com";
-  };
   return (
     <div>
       <h1 className="page-title">Contact</h1>
