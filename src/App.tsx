@@ -1,24 +1,30 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Navbar from './components/navbar/Navbar';
+import Title from './components/title/Title';
+
+import Home from './pages/Home';
+import Contact from './pages/Contact';
+import Blog from './pages/Blog';
 
 function App() {
+  const blogs = [
+    { title: 'Blog Post 1', content: 'This is the content of blog post 1.' },
+    { title: 'Blog Post 2', content: 'This is the content of blog post 2.' },
+    { title: 'Blog Post 3', content: 'This is the content of blog post 3.' }
+  ]
+  const [currentPage, setCurrentPage] = React.useState('home');
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="app-header">
+        <Title />
+        <Navbar setCurrentPage={setCurrentPage} />
+      </div>
+      <div>
+        {currentPage === 'home' && <Home />}
+        {currentPage === 'contact' && <Contact />}
+        {currentPage === 'blog' && <Blog blogs={blogs} />}  
+      </div>
     </div>
   );
 }
