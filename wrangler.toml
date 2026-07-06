@@ -1,0 +1,2 @@
+name = "Agrelius-Financial-App"
+assets = { directory = "build"}
