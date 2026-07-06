@@ -1,3 +1,3 @@
-name = "agrelius-financial-app"
+name = "agrelius-financial-frontend"
 compatibility_date = "2026-07-06"
 assets = { directory = "build"}
