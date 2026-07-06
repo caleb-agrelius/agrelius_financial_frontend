@@ -1,2 +1,2 @@
-name = "Agrelius-Financial-App"
+name = "agrelius-financial-app"
 assets = { directory = "build"}
