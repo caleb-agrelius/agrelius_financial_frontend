@@ -116,6 +116,7 @@ function App() {
           )}
         </div>
       </div>
+      {error && <div style={{ color: 'red', padding: 8 }}>{error}</div>}
       <div>
         {currentPage === 'home' && <Home />}
         {currentPage === 'contact' && <Contact />}

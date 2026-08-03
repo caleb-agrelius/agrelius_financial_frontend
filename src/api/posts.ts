@@ -68,4 +68,5 @@ export async function deletePost(id: string): Promise<void> {
   await handleRes(res);
 }
 
-export default { setAuthToken, login, listPosts, getPost, createPost, updatePost, deletePost };
+const api = { setAuthToken, login, listPosts, getPost, createPost, updatePost, deletePost };
+export default api;

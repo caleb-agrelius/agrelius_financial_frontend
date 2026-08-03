@@ -19,7 +19,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ id, title, content, onEdit, onDelet
             <p>{content}</p>
             <div style={{ marginTop: 8 }}>
                 {onEdit && <button onClick={onEdit} style={{ marginRight: 8 }}>Edit</button>}
-                {onDelete && <button onClick={() => { if (confirm('Delete this post?')) onDelete(); }}>Delete</button>}
+                {onDelete && <button onClick={() => { if (window.confirm('Delete this post?')) onDelete(); }}>Delete</button>}
             </div>
         </div>
     )
